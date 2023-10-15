@@ -2,7 +2,7 @@ package o2client_runtime
 
 import "net/url"
 
-func NewServiceBase(host string) *ServiceBase {
+func newServiceBase(host string) *ServiceBase {
 	return &ServiceBase{
 		host: host,
 	}
