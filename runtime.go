@@ -2,6 +2,12 @@ package o2client_runtime
 
 import "net/url"
 
+func NewServiceBase(host string) *ServiceBase {
+	return &ServiceBase{
+		host: host,
+	}
+}
+
 type ServiceBase struct {
 	host string
 }
