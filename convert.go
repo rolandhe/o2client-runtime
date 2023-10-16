@@ -4,20 +4,20 @@ import (
 	"strconv"
 )
 
-func ConvertIntBoolToString(v bool) string {
+func ConvertBoolToString(v bool) string {
 	return strconv.FormatBool(v)
 }
 
-func ConvertIntBoolListToString(v []bool) []string {
-	return convertListToString(v, ConvertIntBoolToString)
+func ConvertBoolListToString(v []bool) []string {
+	return convertListToString(v, ConvertBoolToString)
 }
 
-func ConvertIntByteToString(v byte) string {
+func ConvertByteToString(v byte) string {
 	return strconv.Itoa(int(v))
 }
 
-func ConvertIntByteListToString(v []byte) []string {
-	return convertListToString(v, ConvertIntByteToString)
+func ConvertByteListToString(v []byte) []string {
+	return convertListToString(v, ConvertByteToString)
 }
 
 func ConvertInt16ToString(v int16) string {
