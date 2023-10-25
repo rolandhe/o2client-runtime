@@ -9,7 +9,7 @@ const httpsSchema = "https://"
 const httpSchema = "http://"
 
 func newServiceBase(host string) *ServiceBase {
-	if !strings.HasPrefix(host, httpsSchema) && strings.HasPrefix(host, httpSchema) {
+	if !strings.HasPrefix(host, httpsSchema) && !strings.HasPrefix(host, httpSchema) {
 		host = httpSchema + host
 	}
 	return &ServiceBase{

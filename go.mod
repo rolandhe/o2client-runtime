@@ -3,10 +3,13 @@ module github.com/rolandhe/o2client-runtime
 go 1.19
 
 require (
+	github.com/darwinOrg/go-common v0.0.4
+	github.com/darwinOrg/go-httpclient v0.0.12
+)
+
+require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/darwinOrg/go-common v0.0.4 // indirect
-	github.com/darwinOrg/go-httpclient v0.0.12 // indirect
 	github.com/darwinOrg/go-logger v0.0.1 // indirect
 	github.com/darwinOrg/go-monitor v0.0.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
