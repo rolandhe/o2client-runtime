@@ -79,6 +79,18 @@ func (w *wrapUrl) AddSimpleParamObject(simpleParam any) error {
 			continue
 		}
 
+		if fValue.Kind() == reflect.Pointer {
+			if fValue.Elem().Kind() == reflect.Struct {
+				if field.Type.Elem().Name() != name {
+					return errors.New("get simpleParam just support int,uint and string, array of these simple type,but support inherit)")
+				}
+				if err := w.AddSimpleParamObject(fValue.Interface()); err != nil {
+					return err
+				}
+				continue
+			}
+		}
+
 		return errors.New("get simpleParam just support int,uint and string, array of these simple type,but support inherit")
 
 	}
