@@ -52,7 +52,10 @@ func (w *wrapUrl) AddSimpleParamObject(simpleParam any) error {
 		field := tp.Field(i)
 		name := field.Tag.Get("json")
 		if name == "" {
-			name = field.Name
+			name = field.Tag.Get("form")
+			if name == "" {
+				name = field.Name
+			}
 		}
 		if strValue, ok := w.maybeSimple(fValue); ok {
 			w.query.Add(name, strValue)
